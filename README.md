@@ -4,7 +4,7 @@ Project developed with [Angular CLI](https://github.com/angular/angular-cli) ver
 The objective of this project is to demonstrate a simple example of application through which credit analyzes can be observed.
 As this is just a sample product, an auxiliary API was not developed. Therefore, the application only has the data of 1 single customer. To access his data, you will need to enter a personal access token.
 
-Token:
+Token: c65687d0-b738-4016-ac87-f47226ea4777
 
 It is important to always remember to enter into the frontend folder before using the following commands.
 
