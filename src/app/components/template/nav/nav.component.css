@@ -1,0 +1,36 @@
+.sidenav {
+    width: 120px;
+    width: auto;
+    color:#2fd67a;
+    border: none;
+}
+
+.nav-list {
+    margin-left: -10px;
+}
+
+.content{
+    background-color: #fff;
+
+}
+
+ .nav-list button:focus {
+    color:#0b13ab;
+ }
+
+ .nav-list button:hover {
+    color:#0b13ab;
+ }
+
+ .btn-nav {
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: rgb(79, 124, 179);
+    border: none;
+    cursor: default;
+ }
+
+ .nav-list div {
+    margin: 1rem;
+    color: rgb(179, 79, 109);
+ }

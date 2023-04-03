@@ -1,0 +1,25 @@
+<mat-card class="corpo mat-elevation-z3">
+    <mat-card-title class="title green">Bem-vindo!</mat-card-title>
+    <mat-card-subtitle class="subtitle">
+    </mat-card-subtitle>
+    <mat-card-content class="content-home gray">
+        Aqui voce poderá :
+        <ul>
+            <li>Realizar cadastros de novos clientes para analise de credito</li>
+            <li>Visualizar analises de credito</li>
+            <li>Ter uma visão geral do andamento de analises</li>
+        </ul>
+
+        <div class="tokenInput gray">
+            <div>
+                Por favor, insira o token de acesso
+                <div>
+                    <input type="search" #myInput />
+                </div>
+                <button mat-raised-button class="btnNovoProduto" (click)="setData(myInput.value)"  color="primary">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

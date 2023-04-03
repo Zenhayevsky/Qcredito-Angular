@@ -1,0 +1,38 @@
+.corpo {
+    margin: 1.5rem;
+    padding: 10px;
+    border: 2px solid rgb(239, 238, 222);
+}
+
+.corpoCardDoc {
+    margin: 0.5rem;
+    padding: 10px;
+    border: 2px solid rgb(239, 238, 222);
+}
+
+.corpo .subtitle {
+    font-size:large;
+    margin-left: 1%;
+}
+.corpo .title {
+    font-size: 2.6rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: auto;
+
+}
+
+.corpo .titletitleAnalise {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+.content {
+    margin:0.8rem;
+    font-size: 0.9rem;
+}
+
+.contentCardDoc {
+    margin:0.rem;
+}

@@ -1,0 +1,186 @@
+{
+    "uuid": "c65687d0-b738-4016-ac87-f47226ea4777", 
+    "policyName": "Política de crédito da 123Qred", 
+    "status": "Completo", 
+    "createdAt": "2021-04-23T18:25:43",
+    "totalPoints": 705, 
+    "recommendation": "block", 
+    "documents": [
+        {
+            "document": "09867890012",
+            "name": "João da Silva", 
+            "analysis": [
+                {
+                    "id": "boardMemberValidation", 
+                    "name": "Validação de sócios", 
+                    "result": "block", 
+                    "rules": {
+                        "blocked": [
+                            {
+                                "name": "E-mail do solicitante não terminar com .ru",
+                                "description": "Não deve existir o domínio .ru no e-mail do sócio",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:43",
+                                "variables": [
+                                    {
+                                        "attribute": "application.email",
+                                        "name": "E-mail do solicitante",
+                                        "value": "joao.dasilva@123qred.com.ru"
+                                    }
+                                ],
+                                "result": "block"
+                            }
+                        ],
+                        "alerts": [
+                            {
+                                "name": "Valor em processos maior que 100 reais",
+                                "description": "Alertar se existir valor maior que 100 reais em processos",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:44",
+                                "variables": [
+                                    {
+                                        "attribute": "lawsuits.totalValue",
+                                        "name": "Valor total de processos",
+                                        "value": 149.87
+                                    }
+                                ],
+                                "result": "alert"
+                            }
+                        ],
+                        "proceed": [
+                            {
+                                "name": "Município fronteiriço",
+                                "description": "Alertar se o município da pessoa faz fronteira com outros países",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:47",
+                                "variables": [
+                                    {
+                                        "attribute": "location.border",
+                                        "name": "Localização fronteiriça",
+                                        "value": false
+                                    }
+                                ],
+                                "result": "proceed"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "boardMemberDocumentsValidation", 
+                    "name": "Validação da documentação dos sócios", 
+                    "result": "block", 
+                    "rules": {
+                        "blocked": [
+                            {
+                                "name": "Carteira de motorista vencida",
+                                "description": "Não deve ter carteira de motorista vencida",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:23:43",
+                                "variables": [
+                                    {
+                                        "attribute": "document.driverLicense",
+                                        "name": "Data de vencimento da carteira de motorista",
+                                        "value": "2020-02-11"
+                                    }
+                                ],
+                                "result": "block"
+                            }
+                        ],
+                        "alerts": [],
+                        "proceed": [
+                            {
+                                "name": "Maior de 18 anos",
+                                "description": "Não deve ter idade menor que 18 anos",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:24:47",
+                                "variables": [
+                                    {
+                                        "attribute": "document.age",
+                                        "name": "Idade",
+                                        "value": 31
+                                    }
+                                ],
+                                "result": "proceed"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "document": "22890554000178",
+            "name": "Empresa do João da Silva LTDA", 
+            "analysis": [
+                {
+                    "id": "companyValidation", 
+                    "name": "Validação da empresa", 
+                    "result": "block", 
+                    "rules": {
+                        "blocked": [
+                            {
+                                "name": "E-mail da empresa não terminar com .ru",
+                                "description": "Não deve existir o domínio .ru no e-mail",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:47",
+                                "variables": [
+                                    {
+                                        "attribute": "company.email",
+                                        "name": "E-mail da empresa",
+                                        "value": "administrativo@123qred.com.ru"
+                                    }
+                                ],
+                                "result": "block"
+                            },
+                            {
+                                "name": "Faturamento da empresa 20%",
+                                "description": "Faturamento da empresa não pode ultrapassar 20% do valor declarado no extrato",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:43",
+                                "variables": [
+                                    {
+                                        "attribute": "calculated.revenuesComparedByBankStatement",
+                                        "name": "% de faturamento vs extrato",
+                                        "value": 44.5
+                                    }
+                                ],
+                                "result": "block"
+                            }
+                        ],
+                        "alerts": [
+                            {
+                                "name": "Valor em processos maior que 100 reais",
+                                "description": "Alertar se existir valor maior que 100 reais em processos",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:44",
+                                "variables": [
+                                    {
+                                        "attribute": "lawsuits.totalValue",
+                                        "name": "Valor total de processos",
+                                        "value": 890.87
+                                    }
+                                ],
+                                "result": "alert"
+                            }
+                        ],
+                        "proceed": [
+                            {
+                                "name": "Município fronteiriço",
+                                "description": "Alertar se o município da empresa faz fronteira com outros países",
+                                "status": "completed",
+                                "executedAt": "2021-04-23T18:27:43",
+                                "variables": [
+                                    {
+                                        "attribute": "location.border",
+                                        "name": "Localização fronteiriça",
+                                        "value": false
+                                    }
+                                ],
+                                "result": "proceed"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+.corpo {
+    margin: 1.5rem;
+    border: 2px solid rgb(239, 238, 222);
+}
+
+.corpo .subtitle {
+    font-size: 1,1rem;
+
+}
+
+.tokenInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tokenInput input {
+    margin:10px;
+}
+
+.corpo .title {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.content-home {
+    margin:1rem;
+}

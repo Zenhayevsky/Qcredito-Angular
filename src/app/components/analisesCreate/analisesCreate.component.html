@@ -1,0 +1,46 @@
+<mat-card class="novoProdutoCorpo">
+    <mat-card-title class="tituloNovoProduto green" appAtributos> Novo Produto </mat-card-title>
+    <form>
+        <mat-form-field>
+            <div>
+                <label>Nome cliente</label>
+            </div>
+            <input matInput placeholder="Nome cliente" name="name" class="inputs" />
+        </mat-form-field>
+        <mat-form-field>
+            <div>
+                <label>Email</label>
+            </div>
+            <input matInput placeholder="Email" name="Email" class="inputs" />
+        </mat-form-field>
+        <mat-form-field>
+            <div>
+                <label>Endereço</label>
+            </div>
+            <input matInput placeholder="Endereço" name="Endereço" class="inputs" />
+        </mat-form-field>
+        <mat-form-field>
+            <div>
+                <label>Telefone</label>
+            </div>
+            <input matInput placeholder="Telefone" name="Telefone" class="inputs" />
+        </mat-form-field>
+        <mat-form-field>
+            <div>
+                <label>Documentos para analise</label>
+            </div>
+            <input matInput placeholder="Documentos" type="file" name="price" />
+        </mat-form-field>
+
+        <div>
+            <button mat-raised-button class="btnSalvaNovoProduto" color="primary">
+                Salvar
+            </button>
+
+            <button mat-raised-button class="btnCancelaNovoProduto" (click)="cancel()">
+                Cancelar
+            </button>
+        </div>
+    </form>
+
+</mat-card>

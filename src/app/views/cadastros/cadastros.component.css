@@ -1,0 +1,19 @@
+.corpo {
+    margin: 1.5rem;
+    border: 2px solid rgb(239, 238, 222);
+}
+
+.corpo .title {
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.content-home {
+    margin:1rem;
+}
+
+.btnNovoCadastro {
+    margin: 3px;
+}

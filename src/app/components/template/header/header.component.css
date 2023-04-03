@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color:#2fd67a;
+    color: white;
+}
+
+.header .logo {
+    max-height: 5rem;
+    margin-left: -10px;
+}
+
+.header .title-group {
+    font-size: 1.9rem;
+}
+
+.btnSair{
+    background-color: transparent;
+    border: none;
+    font-size: 1.0rem;
+    margin-left: auto;
+    display: flex;
+    position: relative;
+}

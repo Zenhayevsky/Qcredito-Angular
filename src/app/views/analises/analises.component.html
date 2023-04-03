@@ -1,0 +1,100 @@
+<mat-card card class="corpo mat-elevation-z3">
+    <mat-card-title class="title green">Analise de documentos</mat-card-title>
+    <mat-card-subtitle class="subtitle blue">
+        Detalhes da analise de crédito
+    </mat-card-subtitle>
+    <mat-card-content class="content gray">
+        <ul>
+            <li>
+                Uuid formecido : {{resposta.uuid}}
+            </li>
+            <li>
+                Pontos acumulados: {{resposta.totalPoints}}
+            </li>
+            <li>
+                Recomendação : {{resposta.recommendation}}
+            </li>
+            <li>
+                Nome da politica executada : {{resposta.policyName}}
+            </li>
+        </ul>
+    </mat-card-content>
+    <mat-card-subtitle class="subtitle blue">
+        Documentos
+    </mat-card-subtitle>
+    <mat-card-content class="contentCardDoc gray">
+        <mat-card class="corpoCardDoc mat-elevation-z3" *ngFor="let doc of documentos">
+            <mat-card-title class="titletitleAnalise green">{{doc.name}} / {{doc.document}}</mat-card-title>
+            <mat-card-content class="content gray">
+                <router-outlet></router-outlet>
+                <span *ngFor="let analy of doc.analysis">Analise {{analy.name}}
+                    <ul>
+                        <li>
+                            Resultado: {{analy.result}}
+                        </li>
+                        <li>
+                            Regras de bloqueio:
+                            <ul *ngFor="let rule of analy.rules.blocked">
+                                <ul>
+                                    Nome da regra: {{rule.name}}
+                                    <li>
+                                        Descrição: {{rule.description}}
+                                    </li>
+                                    <li>
+                                        Atributo: {{rule.variables[0].attribute}}
+                                    </li>
+                                    <li>
+                                        Cliente possui: {{rule.variables[0].value}}
+                                    </li>
+                                    <li>
+                                        Resultado: {{rule.result}} <br /> <br />
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li>
+                            Regras de alertas:
+                            <ul *ngFor="let rule of analy.rules.alerts">
+                                <ul>
+                                    Nome da regra: {{rule.name}}
+                                    <li>
+                                        Descrição: {{rule.description}}
+                                    </li>
+                                    <li>
+                                        Atributo: {{rule.variables[0].attribute}}
+                                    </li>
+                                    <li>
+                                        Cliente possui: {{rule.variables[0].value}}
+                                    </li>
+                                    <li>
+                                        Resultado: {{rule.result}} <br />
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li>
+                            Regras proceed:
+                            <ul *ngFor="let rule of analy.rules.proceed">
+                                <ul>
+                                    Nome da regra: {{rule.name}}
+                                    <li>
+                                        Descrição: {{rule.description}}
+                                    </li>
+                                    <li>
+                                        Atributo: {{rule.variables[0].attribute}}
+                                    </li>
+                                    <li>
+                                        Cliente possui: {{rule.variables[0].value}}
+                                    </li>
+                                    <li>
+                                        Resultado: {{rule.result}} <br />
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </span>
+            </mat-card-content>
+        </mat-card>
+    </mat-card-content>
+</mat-card>
